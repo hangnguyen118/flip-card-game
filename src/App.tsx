@@ -7,6 +7,7 @@ import ResetButton from "./components/ResetButton";
 import Scoreboard from "./components/Scoreboard";
 import Graffiti from "./components/Graffiti";
 import GameBoard from "./components/GameBoard";
+import { playFlipSoundOnce } from "./utils/playFlipSoundOnce";
 
 function App() {
   const [gridSize, setGridSize] = useState(4);
@@ -31,6 +32,7 @@ function App() {
     <>
       <div className="mx-auto h-screen flex flex-col p-4 max-w-3xl bg-linear-to-bl from-cyan-100 via-blue-50 to-white">
         <h2 className="text-center font-bold text-4xl">Card Flip Game</h2>
+        <button onClick={() => playFlipSoundOnce("match")}>play</button>
         <Setting onGridChange={reInitializeGame} />
         <Scoreboard moves={moves} matches={matches} total={deck.length / 2} />
         <ResetButton onReset={() => reInitializeGame(gridSize)} />
