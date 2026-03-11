@@ -51,13 +51,13 @@ export default forwardRef<CardRef, CardProps>(function Card(
         className={`relative w-full h-full transition-transform duration-500 transform-style-preserve-3d ${flipped ? "rotate-y-180" : ""}`}
       >
         <div
-          className={`${baseClass} bg-white/70 backdrop-blur-sm md:hover:bg-blue-500 border-blue-200`}
+          className={`${baseClass} bg-white/70 backdrop-blur-sm hover:bg-blue-500 border-blue-200`}
         >
           ?
         </div>
 
         <div
-          className={`${baseClass} rotate-y-180 flex bg-blue-400 md:hover:bg-blue-500 border-blue-200`}
+          className={`${baseClass} rotate-y-180 flex bg-blue-400 hover:bg-blue-500 border-blue-200`}
         >
           {icon}
         </div>
