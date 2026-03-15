@@ -12,6 +12,11 @@ type CardProps = {
   gridSize: number;
   onClick: (index: number) => void;
 };
+const cardIcons = [
+  "🍎",
+  "🍌"
+  // "🍇",
+];
 export default forwardRef<CardRef, CardProps>(function Card(
   { index, icon, gridSize, onClick },
   ref,
